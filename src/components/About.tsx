@@ -9,7 +9,7 @@ const About = () => {
     { title: 'DevOps & Cloud', description: 'AWS, Docker, Kubernetes, CI/CD', icon: '☁️' },
     { title: 'Mobile Development', description: 'React Native, Flutter, iOS/Android', icon: '📱' },
     { title: 'AI & Machine Learning', description: 'Python, TensorFlow, PyTorch, Data Science', icon: '🤖' },
-    { title: 'UI/UX Design', description: 'Figma, Adobe XD, User Research, Prototyping', icon: '🎯' }
+    { title: 'UI/UX Design', description: 'Figma, User Research, Prototyping', icon: '🎯' }
   ];
 
   return (
@@ -24,30 +24,36 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  I'm a passionate software engineer with a love for creating innovative digital solutions. 
-                  My journey in tech started with curiosity and has evolved into a career dedicated to 
+                  I'm a passionate software engineer with a love for creating innovative digital solutions.
+                  My journey in tech started with curiosity and has evolved into a career dedicated to
                   building applications that make a difference.
                 </p>
                 <p>
-                  With expertise spanning frontend and backend development, I enjoy tackling complex 
-                  challenges and turning ideas into reality. I'm constantly learning new technologies 
+                  With an interest in AI/ML,frontend & backend development, I enjoy tackling complex
+                  challenges and turning ideas into reality. I'm constantly learning new technologies
                   and pushing the boundaries of what's possible.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring the latest tech trends, contributing to 
+                  When I'm not coding, you'll find me exploring the latest tech trends, contributing to
                   open-source projects, or mentoring aspiring developers in the community.
                 </p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg"
-                className="glass hover:bg-neon-teal/20 border-neon-teal text-neon-teal hover:text-white transition-all duration-300 animate-glow"
+              <a
+                href="/Rishi_Software_Engineer.pdf" // This links to the PDF in your public folder
+                download="Rishi-Software_Engineer-CV.pdf" // This tells the browser to download it and suggests a filename
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download CV
-              </Button>
+                <Button
+                  size="lg"
+                  className="glass hover:bg-neon-teal/20 border-neon-teal text-neon-teal hover:text-white transition-all duration-300 animate-glow"
+                // The onClick handler is no longer needed here
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download CV
+                </Button>
+              </a>
               <Button
                 variant="outline"
                 size="lg"
@@ -64,7 +70,7 @@ const About = () => {
           <div className="relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {domains.map((domain, index) => (
-                <Card 
+                <Card
                   key={domain.title}
                   className="glass p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/20"
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -83,7 +89,7 @@ const About = () => {
                 </Card>
               ))}
             </div>
-            
+
             {/* GitHub Icon - Top Right */}
             <div className="absolute -top-4 -right-4">
               <Button
